@@ -48,6 +48,10 @@ def dibujarTablero(tablero):
 				print(' %s ' % celda, end='')
 		print('')
 
-secuencia = [1,2,3,0]
-dibujarTablero(completarTableroEnOrden(secuencia, tableroVacio()))
+secuencia = [1,2,3,1,3,4]
+tablero = tableroVacio()
+tablero = completarTableroEnOrden(secuencia, tablero)
+dibujarTablero(tablero)
+
+print(contenidoColumna(1, tablero))
 
