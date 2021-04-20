@@ -27,6 +27,13 @@ def contenidoFila(nrofila,tablero):
 	for columna in tablero[nrofila-1]:
 		fila.append(columna)
 	return fila
+def todasColumnas(tablero):
+	if tablero == None:
+		return ""
+	columnas = []
+	for columna in range(1,7):
+		columnas.append(contenidoColumna(columna,tablero))
+	return columnas
 def soltarFichaEnColumna(ficha,columna,tablero):
 	for fila in range(6,0,-1):
 		if tablero[fila-1][columna-1] == 0:
@@ -62,5 +69,5 @@ dibujarTablero(tablero)
 
 print(contenidoColumna(1, tablero))
 print(contenidoFila(5, tablero))
-
+print(todasColumnas(tablero))
 
