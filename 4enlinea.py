@@ -34,6 +34,13 @@ def todasColumnas(tablero):
 	for columna in range(1,7):
 		columnas.append(contenidoColumna(columna,tablero))
 	return columnas
+def todasFilas(tablero):
+	if tablero == None:
+		return ""
+	filas = []
+	for fila in tablero:
+		filas.append(fila)
+	return filas
 def soltarFichaEnColumna(ficha,columna,tablero):
 	for fila in range(6,0,-1):
 		if tablero[fila-1][columna-1] == 0:
@@ -70,4 +77,4 @@ dibujarTablero(tablero)
 print(contenidoColumna(1, tablero))
 print(contenidoFila(5, tablero))
 print(todasColumnas(tablero))
-
+print(todasFilas(tablero))
