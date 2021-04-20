@@ -12,6 +12,14 @@ def columnaValida(secuencia):
 		if secuencia[i] < 1 or secuencia[i] >7:
 			return False
 	return True
+def contenidoColumna(nrocolumna,tablero):
+	if tablero == None:
+		return ""
+	columna = []
+	for fila in tablero:
+		celda = fila[nrocolumna - 1]
+		columna.append(celda)
+	return columna
 def soltarFichaEnColumna(ficha,columna,tablero):
 	for fila in range(6,0,-1):
 		if tablero[fila-1][columna-1] == 0:
