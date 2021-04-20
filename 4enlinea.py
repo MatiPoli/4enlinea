@@ -20,6 +20,13 @@ def contenidoColumna(nrocolumna,tablero):
 		celda = fila[nrocolumna - 1]
 		columna.append(celda)
 	return columna
+def contenidoFila(nrofila,tablero):
+	if tablero == None:
+		return ""
+	fila = []
+	for columna in tablero[nrofila-1]:
+		fila.append(columna)
+	return fila
 def soltarFichaEnColumna(ficha,columna,tablero):
 	for fila in range(6,0,-1):
 		if tablero[fila-1][columna-1] == 0:
@@ -54,4 +61,6 @@ tablero = completarTableroEnOrden(secuencia, tablero)
 dibujarTablero(tablero)
 
 print(contenidoColumna(1, tablero))
+print(contenidoFila(5, tablero))
+
 
