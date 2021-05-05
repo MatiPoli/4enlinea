@@ -61,20 +61,23 @@ def completarTableroEnOrden(secuencia,tablero):
 def dibujarTablero(tablero):
 	if tablero == None:
 		return
+	print("+---------------------+")
 	for fila in tablero:
+		print("|", end='')
 		for celda in fila:
 			if celda == 0:
 				print('   ', end='')
 			else:
 				print(' %s ' % celda, end='')
-		print('')
+		print("|")
+	print("+---------------------+")
 
-secuencia = [1,2,3,1,3,4]
+secuencia = [1,2,3,1,3,4,5,6,7]
 tablero = tableroVacio()
 tablero = completarTableroEnOrden(secuencia, tablero)
 dibujarTablero(tablero)
 
-print(contenidoColumna(1, tablero))
-print(contenidoFila(5, tablero))
-print(todasColumnas(tablero))
-print(todasFilas(tablero))
+#print(contenidoColumna(1, tablero))
+#print(contenidoFila(5, tablero))
+#print(todasColumnas(tablero))
+#print(todasFilas(tablero))
