@@ -8,8 +8,9 @@ def tableroVacio():
 			[0,0,0,0,0,0,0]
 			]
 def columnaValida(secuencia):
+	i = 0
 	for i in secuencia:
-		if secuencia[i] < 1 or secuencia[i] >7:
+		if i < 1 or i >7:
 			return False
 	return True
 def contenidoColumna(nrocolumna,tablero):
@@ -72,7 +73,11 @@ def dibujarTablero(tablero):
 		print("|")
 	print("+---------------------+")
 
-secuencia = [1,2,3,1,3,4,5,6,7]
+secuencia_ingreso = input("Ingrese la secuencia de numeros: ")
+secuencia = []
+for items in secuencia_ingreso.split(','):
+	secuencia.append(int(items))
+
 tablero = tableroVacio()
 tablero = completarTableroEnOrden(secuencia, tablero)
 dibujarTablero(tablero)
