@@ -73,10 +73,10 @@ def dibujarTablero(tablero):
 		print("|")
 	print("+---------------------+")
 
-secuencia_ingreso = input("Ingrese la secuencia de numeros: ")
-secuencia = []
-for items in secuencia_ingreso.split(','):
-	secuencia.append(int(items))
+#secuencia_ingreso = input("Ingrese la secuencia de numeros: ")
+secuencia = [1,2,3,4,5,6,1]
+#for items in secuencia_ingreso.split(','):
+#	secuencia.append(int(items))
 
 tablero = tableroVacio()
 tablero = completarTableroEnOrden(secuencia, tablero)
